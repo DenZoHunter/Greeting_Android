@@ -1,18 +1,101 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    android:orientation="vertical"
+    tools:ignore="UseSwitchCompatOrMaterialXml">
 
     <TextView
+        android:id="@+id/header_textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#9ACD32"
+        android:gravity="center"
+        android:shadowColor="@color/black"
+        android:shadowDx="1"
+        android:shadowDy="1"
+        android:shadowRadius="2"
+        android:text="Welcome"
+        android:textColor="#FFFFFF"
+        android:textSize="30sp" />
+
+    <ToggleButton
+        android:id="@+id/toggle_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textOff="Подсказки выключены"
+        android:textOn="Подсказки включены"
+        android:textSize="15sp" />
+
+    <EditText
+        android:id="@+id/first_name_edit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Введите имя"
+        android:inputType="text"
+        android:textSize="15sp" />
+
+    <EditText
+        android:id="@+id/last_name_edit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Введите номер телефона"
+        android:inputType="phone"
+        android:textSize="15sp" />
+
+    <EditText
+        android:id="@+id/email_edit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Введите почту"
+        android:inputType="textEmailAddress"
+        android:textSize="15sp" />
+
+    <EditText
+        android:id="@+id/password_edit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Придумайте пароль"
+        android:inputType="textPassword"
+        android:textSize="15sp" />
+
+    <CheckBox
+        android:id="@+id/save_checkbox"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:text="Запомнить мои данные"
+        android:textSize="15sp" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <Switch
+        android:id="@+id/switch_spam"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="Особое условие:" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="Дата начала:"
+        android:textSize="20sp" />
+
+    <CalendarView
+        android:id="@+id/main_calendar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:selectedWeekBackgroundColor="#ff0000"
+        android:weekNumberColor="#0000ff"
+        android:weekSeparatorLineColor="#00ff00" />
+
+    <Button
+        android:id="@+id/reg_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="@color/black"
+        android:text="Нажми меня"
+        android:textSize="15sp" />
+
+</LinearLayout>
